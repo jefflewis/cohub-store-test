@@ -1,0 +1,20 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "d3": "latest",
+    "dimple": "latest",
+    "angular": "latest",
+    "angular-ui-router": "latest",
+    "angular-animate": "latest",
+    "angular-local-storage": "latest",
+    "bootstrap-sass-official": "latest",
+    "angular-bootstrap": "latest",
+    "angular-dimple": "latest",
+    "jquery": "latest",
+    "jquery-ui": "latest",
+    "slickgrid": "latest",
+    "handsontable": "latest",
+    "angular-ui-ace": "latest",
+    "angular-selectize2": "latest"
+  }
+}
