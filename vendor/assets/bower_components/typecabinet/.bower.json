@@ -1,0 +1,36 @@
+{
+  "name": "TypeCabinet",
+  "version": "0.0.4",
+  "homepage": "https://github.com/nikolaswise/TypeCabinet",
+  "authors": [
+    "Nikolas Wise <nikolaswise@gmail.com>"
+  ],
+  "description": "A typographic sass framework",
+  "main": "dist/typecabinet.scss",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "sass",
+    "type",
+    "typography"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "site/",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.4",
+    "commit": "cda5c2d0b7eb64d5c5f20e45ac5a7ab3295c0b27"
+  },
+  "_source": "git://github.com/nikolaswise/TypeCabinet.git",
+  "_target": "~0.0.2",
+  "_originalSource": "typecabinet"
+}
