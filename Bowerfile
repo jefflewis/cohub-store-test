@@ -2,6 +2,7 @@ asset 'd3'
 asset 'dimple'
 
 asset 'angular'
+asset 'angular-route'
 asset 'angular-ui-router'
 asset 'angular-animate'
 asset 'angular-local-storage'

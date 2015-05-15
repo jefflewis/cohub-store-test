@@ -18,9 +18,8 @@
 //= require angular-animate/angular-animate
 //= require angular-aria/angular-aria
 //= require hammerjs/hammer
-
 //= require angular-ui-router/release/angular-ui-router
-
+//= require angular-route/angular-route
 //= require angular-rails-templates
 //= require angular-local-storage/dist/angular-local-storage
 
