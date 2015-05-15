@@ -39,16 +39,8 @@ end
 # Deal with some crazy angular not finding assets thing.
 gem 'angular-rails-templates'
 
-gem "foreman"
-
 gem "pg"
 
 gem 'seed_dump'
 
 gem 'angular_rails_csrf'
-
-group :production, :staging do
-  gem "rails_12factor"
-  gem "rails_stdout_logging"
-  gem "rails_serve_static_assets"
-end
