@@ -1,3 +1,3 @@
 # Be sure to restart your server when you modify this file.
 
-Rails.application.config.session_store :cookie_store, key: '_engjobs_session'
+CohubTestStore::Application.config.session_store :cookie_store, key: '_cohub-test-store_session'

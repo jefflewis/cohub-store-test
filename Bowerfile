@@ -1,23 +1,7 @@
-asset 'd3'
-asset 'dimple'
-
 asset 'angular'
 asset 'angular-route'
-asset 'angular-ui-router'
-asset 'angular-animate'
-asset 'angular-local-storage'
-
+asset 'angular-resource'
+asset 'angular-mocks'
 asset 'bootstrap-sass-official'
-asset 'angular-bootstrap'
-
-asset 'angular-dimple'
-
-asset 'jquery'
-asset 'jquery-ui'
-asset 'slickgrid'
-
-asset 'handsontable'
-
-asset 'angular-ui-ace'
-
-asset 'angular-selectize2'
+asset 'angular-flash'
+# vim: ft=ruby

@@ -1,6 +1,0 @@
-// Respond To
-@mixin respond-to($max: max-width, $min: null, $type: min-width) {
-  @media screen and ($max: $type) {
-    @content;
-  }
-}

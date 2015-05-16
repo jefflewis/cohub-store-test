@@ -10,22 +10,11 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-
 //= require jquery
-//= require jquery-ui
-
+//= require jquery_ujs
 //= require angular/angular
-//= require angular-animate/angular-animate
-//= require angular-aria/angular-aria
-//= require hammerjs/hammer
-//= require angular-ui-router/release/angular-ui-router
 //= require angular-route/angular-route
+//= require angular-resource/angular-resource
+//= require angular-flash/dist/angular-flash
 //= require angular-rails-templates
-//= require angular-local-storage/dist/angular-local-storage
-
-//= require bootstrap-sass-official/assets/javascripts/bootstrap
-
-//= require angular-bootstrap/ui-bootstrap-tpls.js
-
-//= require app
 //= require_tree .
