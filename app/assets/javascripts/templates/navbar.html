@@ -1,12 +1,13 @@
 <div class="navbar navbar-inverse">
 	<div class="navbar-inner">
 		<div class="container">
-			<a class="brand">Cohub Test Store</a>
 			<div class="nav-collapse">
-				<ul class="nav" id="navigation-tabs">
-					<li><a href="../home.html">Home</a></li>
-					<li><a href="../second.html">Second</a></li>
-					<li><a href="../third.html">Third</a></li>
+				<ul class="list--inline" id="navigation-tabs">
+          <a class="logo" href="#/products">Cohub Test Store</a>
+          <button ng-click="newProduct()" class="btn btn-success btn-sm" style="float:right; margin-top:10px;">
+        <i aria-hidden="true" class="glyphicon glyphicon-plus"></i>
+        Add a Prodcut
+      </button>
 				</ul>
 			</div>
 		</div>

@@ -2,11 +2,16 @@ class ProductsController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def index
-    @products = if params[:keywords]
-                 Product.where('name ilike ?',"%#{params[:keywords]}%")
-               else
     @products = Product.all
-               end
+                # if params[:keywords]
+    #              Product.where('name ilike ?',"%#{params[:keywords]}%")
+    # 
+    #            elsif !params
+    #              Product.all
+    #
+    #            else
+    #              []
+    #            end
   end
 
   def show

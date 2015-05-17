@@ -16,8 +16,8 @@ cohubTestStore.config([ '$routeProvider', 'flashProvider',
     flashProvider.successClassnames.push("alert-success")
 
     $routeProvider
-      .when('/',
-        templateUrl: "index.html"
+      .when('/products',
+        templateUrl: "products.html"
         controller: 'ProductsController'
       ).when('/products/new',
         templateUrl: "form.html"
@@ -28,7 +28,7 @@ cohubTestStore.config([ '$routeProvider', 'flashProvider',
       ).when('/products/:productId/edit',
         templateUrl: "form.html"
         controller: 'ProductController'
-      )
+      ).otherwise(redirectTo: '/products')
 ])
 
 controllers = angular.module('controllers',[])
