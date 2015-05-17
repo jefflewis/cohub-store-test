@@ -3,15 +3,6 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-                # if params[:keywords]
-    #              Product.where('name ilike ?',"%#{params[:keywords]}%")
-    # 
-    #            elsif !params
-    #              Product.all
-    #
-    #            else
-    #              []
-    #            end
   end
 
   def show
@@ -19,14 +10,17 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(params.require(:product).permit(:name,:description,:quantity,:sku,:price))
+    @product = Product.new(product_params)
+    # @product.image = params[:product][:image]
     @product.save
     render 'show', status: 201
   end
 
   def update
     product = Product.find(params[:id])
-    product.update_attributes(params.require(:product).permit(:name,:description,:quantity,:sku,:price))
+    product.assign_attributes(product_params)
+    # product.document = params[:product][:image]
+    product.save
     head :no_content
   end
 
@@ -35,4 +29,9 @@ class ProductsController < ApplicationController
     product.destroy
     head :no_content
   end
+
+  def product_params
+    params.require(:product).permit(:name,:description,:quantity,:sku,:price,:image)
+  end
+
 end

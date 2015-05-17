@@ -56,6 +56,34 @@
     <div class="col-md-5">
       <input ng-model="product.price" class="form-control" ng-pattern="/^\d+$/" name="price" />
     </div>
+    <!-- <div>
+      <input type="file" name="avatar" onchange="angular.element(this).scope().uploadFile(this.files)" />
+      <input name="file" type="file" file />
+      <button class="btn btn-default" ng-click="upload()"> Upload</button>
+    </div> -->
+    <!-- The Upload Form -->
+    <div class="col-md-8">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <select class="fr" ng-model="sizeLimit">
+            <option value="5292880">5MB Upload Limit</option>
+            <option value="10585760">10MB Upload Limit</option>
+            <option value="15878640">15MB Upload Limit</option>
+          </select>
+          <h3 class="panel-title">Step 2: Upload The File</h3>
+        </div>
+        <div class="panel-body">
+          <input class="bottom-marg-15" type="file" name="file" file></input>
+          <!-- Progress Bar -->
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{ uploadProgress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ uploadProgress }}%;">
+              {{ uploadProgress == 0 ? '' : uploadProgress + '%' }}
+            </div>
+          </div>
+          <a class="btn btn-primary btn-block btn-lg" ng-click="upload()">Upload</a>
+        </div>
+      </div>
+    </div>     
   </div>
   <div class="form-group">
     <div class="col-md-offset-2 col-md-3">

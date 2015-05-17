@@ -9,6 +9,9 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'jbuilder'
 
+gem 'paperclip'
+gem 'aws-sdk'
+
 gem 'bower-rails'
 gem 'angular-rails-templates'
 
@@ -33,4 +36,3 @@ end
 group :doc do
   gem 'sdoc', require: false
 end
-

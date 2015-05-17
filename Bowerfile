@@ -4,4 +4,4 @@ asset 'angular-resource'
 asset 'angular-mocks'
 asset 'bootstrap-sass-official'
 asset 'angular-flash'
-# vim: ft=ruby
+asset 'aws-sdk-js'

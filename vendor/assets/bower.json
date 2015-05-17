@@ -6,6 +6,7 @@
     "angular-resource": "latest",
     "angular-mocks": "latest",
     "bootstrap-sass-official": "latest",
-    "angular-flash": "latest"
+    "angular-flash": "latest",
+    "aws-sdk-js": "latest"
   }
 }

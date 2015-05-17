@@ -12519,3 +12519,17 @@ Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms)
   [1m[35m (0.3ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL
   [1m[36m (4.1ms)[0m  [1mTRUNCATE TABLE "public"."products" RESTART IDENTITY CASCADE;[0m
   [1m[35m (3.4ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL
+  [1m[36m (24.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (2.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProducts (20150516235455)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (18.8ms)[0m  [1mCREATE TABLE "products" ("id" serial primary key, "name" character varying, "description" text, "quantity" integer, "price" decimal, "sku" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150516235455"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to AddAttachmentUrlToImages (20150517180531)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (2.5ms)[0m  [1mALTER TABLE "images" ADD "url_file_name" character varying[0m
+PG::UndefinedTable: ERROR:  relation "images" does not exist
+: ALTER TABLE "images" ADD "url_file_name" character varying
+  [1m[35m (0.1ms)[0m  ROLLBACK
