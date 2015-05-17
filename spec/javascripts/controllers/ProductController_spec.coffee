@@ -71,11 +71,11 @@ describe "ProductController", ->
       httpBackend.expectPOST(request).respond(201,newProduct)
 
     it 'posts to the backend', ->
-      scope.product.name          =   newProduct.name
-      scope.product.description   =   newProduct.description
-      scope.prduct.quantity       =   newProduct.quantity
-      scope.prduct.sku            =   newProduct.sku
-      scope.prduct.price          =   newProduct.price
+      scope.product.name            =   newProduct.name
+      scope.product.description     =   newProduct.description
+      scope.product.quantity        =   newProduct.quantity
+      scope.product.sku             =   newProduct.sku
+      scope.product.price           =   newProduct.price
       scope.save()
       httpBackend.flush()
       expect(location.path()).toBe("/products/#{newProduct.id}")
@@ -92,11 +92,11 @@ describe "ProductController", ->
       httpBackend.expectPUT(request).respond(204)
 
     it 'posts to the backend', ->
-      scope.product.name        =   updatedProduct.name
-      scope.product.description =   updatedProduct.description
-      scope.prduct.quantity     =   updatedProduct.quantity
-      scope.prduct.sku          =   updatedProduct.sku
-      scope.prduct.price        =   updatedProduct.price
+      scope.product.name          =   updatedProduct.name
+      scope.product.description   =   updatedProduct.description
+      scope.product.quantity      =   updatedProduct.quantity
+      scope.product.sku           =   updatedProduct.sku
+      scope.product.price         =   updatedProduct.price
       scope.save()
       httpBackend.flush()
       expect(location.path()).toBe("/products/#{scope.product.id}")

@@ -11989,3 +11989,533 @@ Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
   [1m[35m (0.2ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL
   [1m[36m (4.0ms)[0m  [1mTRUNCATE TABLE "public"."products" RESTART IDENTITY CASCADE;[0m
   [1m[35m (0.4ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL
+  [1m[36m (2.8ms)[0m  [1m          SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE 
+            tablename !~ '_prt_' AND 
+            tablename <> 'schema_migrations' AND 
+            schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35m (8.0ms)[0m  select table_name from information_schema.views where table_schema = 'cohub-store_test'
+  [1m[36m (32.5ms)[0m  [1mTRUNCATE TABLE "public"."products" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (1.6ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (24.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "price", "sku", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Skateboard"], ["description", "Element Trucks, Sector 9 Longboard Wheels, Zero American Punk Deck"], ["quantity", "1.0"], ["price", 85], ["sku", "CH-310"], ["created_at", "2015-05-16 23:10:23.530056"], ["updated_at", "2015-05-16 23:10:23.530056"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProductsController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 204 No Content in 40ms (ActiveRecord: 1.1ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("name", "description", "quantity", "price", "sku", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Skateboard"], ["description", "Element Trucks, Sector 9 Longboard Wheels, Zero American Punk Deck"], ["quantity", "1.0"], ["price", 85], ["sku", "CH-310"], ["created_at", "2015-05-16 23:10:23.605858"], ["updated_at", "2015-05-16 23:10:23.605858"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ProductsController#destroy as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "products" WHERE "products"."id" = $1  [["id", 2]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 6ms (ActiveRecord: 2.3ms)
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Football"], ["created_at", "2015-05-16 23:10:23.623881"], ["updated_at", "2015-05-16 23:10:23.623881"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Baseball Glove"], ["created_at", "2015-05-16 23:10:23.626249"], ["updated_at", "2015-05-16 23:10:23.626249"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Hockey Stick"], ["created_at", "2015-05-16 23:10:23.628550"], ["updated_at", "2015-05-16 23:10:23.628550"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Skateboard"], ["created_at", "2015-05-16 23:10:23.630279"], ["updated_at", "2015-05-16 23:10:23.630279"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"ball"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%ball%')[0m
+  Rendered products/_product.json.jbuilder (0.4ms)
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/index.json.jbuilder (12.2ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.7ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Football"], ["created_at", "2015-05-16 23:10:23.678139"], ["updated_at", "2015-05-16 23:10:23.678139"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Baseball Glove"], ["created_at", "2015-05-16 23:10:23.680016"], ["updated_at", "2015-05-16 23:10:23.680016"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hockey Stick"], ["created_at", "2015-05-16 23:10:23.681660"], ["updated_at", "2015-05-16 23:10:23.681660"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Skateboard"], ["created_at", "2015-05-16 23:10:23.683044"], ["updated_at", "2015-05-16 23:10:23.683044"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"ball"}
+  [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%ball%')
+  Rendered products/_product.json.jbuilder (1.4ms)
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/index.json.jbuilder (5.9ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Football"], ["created_at", "2015-05-16 23:10:23.695639"], ["updated_at", "2015-05-16 23:10:23.695639"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Baseball Glove"], ["created_at", "2015-05-16 23:10:23.699548"], ["updated_at", "2015-05-16 23:10:23.699548"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Hockey Stick"], ["created_at", "2015-05-16 23:10:23.703070"], ["updated_at", "2015-05-16 23:10:23.703070"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Skateboard"], ["created_at", "2015-05-16 23:10:23.705350"], ["updated_at", "2015-05-16 23:10:23.705350"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"ball"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%ball%')[0m
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/index.json.jbuilder (2.8ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Football"], ["created_at", "2015-05-16 23:10:23.714821"], ["updated_at", "2015-05-16 23:10:23.714821"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Baseball Glove"], ["created_at", "2015-05-16 23:10:23.716283"], ["updated_at", "2015-05-16 23:10:23.716283"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hockey Stick"], ["created_at", "2015-05-16 23:10:23.717494"], ["updated_at", "2015-05-16 23:10:23.717494"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Skateboard"], ["created_at", "2015-05-16 23:10:23.718613"], ["updated_at", "2015-05-16 23:10:23.718613"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"ball"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%ball%')
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/index.json.jbuilder (1.6ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Football"], ["created_at", "2015-05-16 23:10:23.725493"], ["updated_at", "2015-05-16 23:10:23.725493"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Baseball Glove"], ["created_at", "2015-05-16 23:10:23.727461"], ["updated_at", "2015-05-16 23:10:23.727461"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Hockey Stick"], ["created_at", "2015-05-16 23:10:23.729146"], ["updated_at", "2015-05-16 23:10:23.729146"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Skateboard"], ["created_at", "2015-05-16 23:10:23.730822"], ["updated_at", "2015-05-16 23:10:23.730822"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"zzzzzzzzz"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%zzzzzzzzz%')[0m
+  Rendered products/index.json.jbuilder (1.0ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by ProductsController#create as JSON
+  Parameters: {"product"=>{"name"=>"Snow Shoes", "description"=>"Size 8, Mens", "quantity"=>25, "price"=>60, "sku"=>"CH-103"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "sku", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Snow Shoes"], ["description", "Size 8, Mens"], ["quantity", "25.0"], ["sku", "CH-103"], ["price", 60], ["created_at", "2015-05-16 23:10:23.740418"], ["updated_at", "2015-05-16 23:10:23.740418"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (1.2ms)
+Completed 201 Created in 8ms (Views: 3.0ms | ActiveRecord: 1.0ms)
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by ProductsController#create as JSON
+  Parameters: {"product"=>{"name"=>"Snow Shoes", "description"=>"Size 8, Mens", "quantity"=>25, "price"=>60, "sku"=>"CH-103"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "sku", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Snow Shoes"], ["description", "Size 8, Mens"], ["quantity", "25.0"], ["sku", "CH-103"], ["price", 60], ["created_at", "2015-05-16 23:10:23.752225"], ["updated_at", "2015-05-16 23:10:23.752225"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (0.6ms)
+Completed 201 Created in 3ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by ProductsController#create as JSON
+  Parameters: {"product"=>{"name"=>"Snow Shoes", "description"=>"Size 8, Mens", "quantity"=>25, "price"=>60, "sku"=>"CH-103"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("name", "description", "quantity", "sku", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Snow Shoes"], ["description", "Size 8, Mens"], ["quantity", "25.0"], ["sku", "CH-103"], ["price", 60], ["created_at", "2015-05-16 23:10:23.765205"], ["updated_at", "2015-05-16 23:10:23.765205"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (0.5ms)
+Completed 201 Created in 5ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by ProductsController#create as JSON
+  Parameters: {"product"=>{"name"=>"Snow Shoes", "description"=>"Size 8, Mens", "quantity"=>25, "price"=>60, "sku"=>"CH-103"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "sku", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Snow Shoes"], ["description", "Size 8, Mens"], ["quantity", "25.0"], ["sku", "CH-103"], ["price", 60], ["created_at", "2015-05-16 23:10:23.771940"], ["updated_at", "2015-05-16 23:10:23.771940"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (0.4ms)
+Completed 201 Created in 3ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by ProductsController#create as JSON
+  Parameters: {"product"=>{"name"=>"Snow Shoes", "description"=>"Size 8, Mens", "quantity"=>25, "price"=>60, "sku"=>"CH-103"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "sku", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Snow Shoes"], ["description", "Size 8, Mens"], ["quantity", "25.0"], ["sku", "CH-103"], ["price", 60], ["created_at", "2015-05-16 23:10:23.777915"], ["updated_at", "2015-05-16 23:10:23.777915"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (0.4ms)
+Completed 201 Created in 4ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by ProductsController#create as JSON
+  Parameters: {"product"=>{"name"=>"Snow Shoes", "description"=>"Size 8, Mens", "quantity"=>25, "price"=>60, "sku"=>"CH-103"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "sku", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Snow Shoes"], ["description", "Size 8, Mens"], ["quantity", "25.0"], ["sku", "CH-103"], ["price", 60], ["created_at", "2015-05-16 23:10:23.784736"], ["updated_at", "2015-05-16 23:10:23.784736"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (0.3ms)
+Completed 201 Created in 3ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by ProductsController#create as JSON
+  Parameters: {"product"=>{"name"=>"Snow Shoes", "description"=>"Size 8, Mens", "quantity"=>25, "price"=>60, "sku"=>"CH-103"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "sku", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Snow Shoes"], ["description", "Size 8, Mens"], ["quantity", "25.0"], ["sku", "CH-103"], ["price", 60], ["created_at", "2015-05-16 23:10:23.793079"], ["updated_at", "2015-05-16 23:10:23.793079"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered products/_product.json.jbuilder (0.3ms)
+  Rendered products/show.json.jbuilder (0.8ms)
+Completed 201 Created in 5ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+  [1m[36mProduct Load (1.4ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "price", "sku", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Surfbaord"], ["description", "6ft Fishtail"], ["quantity", "2.0"], ["price", 450], ["sku", "CH-001"], ["created_at", "2015-05-16 23:10:23.803957"], ["updated_at", "2015-05-16 23:10:23.803957"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"30"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (0.5ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "price", "sku", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Surfbaord"], ["description", "6ft Fishtail"], ["quantity", "2.0"], ["price", 450], ["sku", "CH-001"], ["created_at", "2015-05-16 23:10:23.810786"], ["updated_at", "2015-05-16 23:10:23.810786"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"31"}
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (0.5ms)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "price", "sku", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Surfbaord"], ["description", "6ft Fishtail"], ["quantity", "2.0"], ["price", 450], ["sku", "CH-001"], ["created_at", "2015-05-16 23:10:23.818592"], ["updated_at", "2015-05-16 23:10:23.818592"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"32"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (0.8ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "price", "sku", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Surfbaord"], ["description", "6ft Fishtail"], ["quantity", "2.0"], ["price", 450], ["sku", "CH-001"], ["created_at", "2015-05-16 23:10:23.834534"], ["updated_at", "2015-05-16 23:10:23.834534"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"33"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered products/_product.json.jbuilder (0.3ms)
+  Rendered products/show.json.jbuilder (0.7ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "price", "sku", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Surfbaord"], ["description", "6ft Fishtail"], ["quantity", "2.0"], ["price", 450], ["sku", "CH-001"], ["created_at", "2015-05-16 23:10:23.842491"], ["updated_at", "2015-05-16 23:10:23.842491"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"34"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (0.5ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "price", "sku", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Surfbaord"], ["description", "6ft Fishtail"], ["quantity", "2.0"], ["price", 450], ["sku", "CH-001"], ["created_at", "2015-05-16 23:10:23.849145"], ["updated_at", "2015-05-16 23:10:23.849145"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"35"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 35]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (0.7ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "price", "sku", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Surfbaord"], ["description", "6ft Fishtail"], ["quantity", "2.0"], ["price", 450], ["sku", "CH-001"], ["created_at", "2015-05-16 23:10:23.858401"], ["updated_at", "2015-05-16 23:10:23.858401"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"36"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (0.5ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"-9999"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", -9999]]
+  Rendered text template (0.0ms)
+Completed 404 Not Found in 4ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "quantity", "price", "sku", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Skateboard"], ["description", "Element Trucks, Sector 9 Longboard Wheels, Zero American Punk Deck"], ["quantity", "1.0"], ["price", 85], ["sku", "CH-310"], ["created_at", "2015-05-16 23:10:23.873042"], ["updated_at", "2015-05-16 23:10:23.873042"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ProductsController#update as JSON
+  Parameters: {"product"=>{"name"=>"Skateboard", "description"=>"Element Trucks, Sector 9 Longboard Wheels, Zero American Punk Deck", "quantity"=>1, "price"=>85, "sku"=>"CH-310"}, "id"=>"37"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 204 No Content in 2ms (ActiveRecord: 0.5ms)
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "description", "quantity", "price", "sku", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Skateboard"], ["description", "Element Trucks, Sector 9 Longboard Wheels, Zero American Punk Deck"], ["quantity", "1.0"], ["price", 85], ["sku", "CH-310"], ["created_at", "2015-05-16 23:10:23.882810"], ["updated_at", "2015-05-16 23:10:23.882810"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ProductsController#update as JSON
+  Parameters: {"product"=>{"name"=>"Skateboard", "description"=>"Element Trucks, Sector 9 Longboard Wheels, Zero American Punk Deck", "quantity"=>1, "price"=>85, "sku"=>"CH-310"}, "id"=>"38"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 204 No Content in 3ms (ActiveRecord: 0.5ms)
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "price", "sku", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Skateboard"], ["description", "Element Trucks, Sector 9 Longboard Wheels, Zero American Punk Deck"], ["quantity", "1.0"], ["price", 85], ["sku", "CH-310"], ["created_at", "2015-05-16 23:10:23.891983"], ["updated_at", "2015-05-16 23:10:23.891983"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProductsController#update as JSON
+  Parameters: {"product"=>{"name"=>"Skateboard", "description"=>"Element Trucks, Sector 9 Longboard Wheels, Zero American Punk Deck", "quantity"=>1, "price"=>85, "sku"=>"CH-310"}, "id"=>"39"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 39]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 2ms (ActiveRecord: 0.4ms)
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 39]]
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "price", "sku", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Skateboard"], ["description", "Element Trucks, Sector 9 Longboard Wheels, Zero American Punk Deck"], ["quantity", "1.0"], ["price", 85], ["sku", "CH-310"], ["created_at", "2015-05-16 23:10:23.904484"], ["updated_at", "2015-05-16 23:10:23.904484"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProductsController#update as JSON
+  Parameters: {"product"=>{"name"=>"Skateboard", "description"=>"Element Trucks, Sector 9 Longboard Wheels, Zero American Punk Deck", "quantity"=>1, "price"=>85, "sku"=>"CH-310"}, "id"=>"40"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 40]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 2ms (ActiveRecord: 0.4ms)
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 40]]
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "price", "sku", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Skateboard"], ["description", "Element Trucks, Sector 9 Longboard Wheels, Zero American Punk Deck"], ["quantity", "1.0"], ["price", 85], ["sku", "CH-310"], ["created_at", "2015-05-16 23:10:23.915695"], ["updated_at", "2015-05-16 23:10:23.915695"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProductsController#update as JSON
+  Parameters: {"product"=>{"name"=>"Skateboard", "description"=>"Element Trucks, Sector 9 Longboard Wheels, Zero American Punk Deck", "quantity"=>1, "price"=>85, "sku"=>"CH-310"}, "id"=>"41"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 41]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 2ms (ActiveRecord: 0.6ms)
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 41]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "price", "sku", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Skateboard"], ["description", "Element Trucks, Sector 9 Longboard Wheels, Zero American Punk Deck"], ["quantity", "1.0"], ["price", 85], ["sku", "CH-310"], ["created_at", "2015-05-16 23:10:23.925058"], ["updated_at", "2015-05-16 23:10:23.925058"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProductsController#update as JSON
+  Parameters: {"product"=>{"name"=>"Skateboard", "description"=>"Element Trucks, Sector 9 Longboard Wheels, Zero American Punk Deck", "quantity"=>1, "price"=>85, "sku"=>"CH-310"}, "id"=>"42"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 42]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 3ms (ActiveRecord: 0.9ms)
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 42]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Soccer Ball"], ["created_at", "2015-05-16 23:10:23.934783"], ["updated_at", "2015-05-16 23:10:23.934783"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Tennis Racket"], ["created_at", "2015-05-16 23:10:23.936781"], ["updated_at", "2015-05-16 23:10:23.936781"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Tennis Ball"], ["created_at", "2015-05-16 23:10:23.939241"], ["updated_at", "2015-05-16 23:10:23.939241"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Shotgun"], ["created_at", "2015-05-16 23:10:23.941418"], ["updated_at", "2015-05-16 23:10:23.941418"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Started GET "/" for 127.0.0.1 at 2015-05-16 16:10:29 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 363ms (Views: 362.5ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-05-16 16:10:29 -0700
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-05-16 16:10:29 -0700
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-05-16 16:10:30 -0700
+Started GET "/products?format=json&keywords=ball" for 127.0.0.1 at 2015-05-16 16:10:31 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"ball"}
+  [1m[36mProduct Load (3.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%ball%')[0m
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/index.json.jbuilder (6.2ms)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 3.3ms)
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL
+  [1m[36m (5.1ms)[0m  [1m          SELECT schemaname || '.' || tablename
+          FROM pg_tables
+          WHERE 
+            tablename !~ '_prt_' AND 
+            tablename <> 'schema_migrations' AND 
+            schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35m (5.9ms)[0m  select table_name from information_schema.views where table_schema = 'cohub-store_test'
+  [1m[36m (5.9ms)[0m  [1mTRUNCATE TABLE "public"."products" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Started GET "/" for 127.0.0.1 at 2015-05-16 16:10:32 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+Started POST "/products?format=json" for 127.0.0.1 at 2015-05-16 16:10:35 -0700
+Processing by ProductsController#create as JSON
+  Parameters: {"name"=>"Baked Brussel Sprouts", "description"=>"Slather in oil, then bake for 20 minutes", "product"=>{"name"=>"Baked Brussel Sprouts", "description"=>"Slather in oil, then bake for 20 minutes"}}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "products" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Baked Brussel Sprouts"], ["description", "Slather in oil, then bake for 20 minutes"], ["created_at", "2015-05-16 23:10:35.803749"], ["updated_at", "2015-05-16 23:10:35.803749"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (0.6ms)
+Completed 201 Created in 15ms (Views: 1.3ms | ActiveRecord: 2.2ms)
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-16 16:10:35 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (0.6ms)
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 1.4ms)
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-16 16:10:37 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (0.5ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+Started PUT "/products/1?format=json" for 127.0.0.1 at 2015-05-16 16:10:39 -0700
+Processing by ProductsController#update as JSON
+  Parameters: {"id"=>"1", "name"=>"Roasted Brussel Sprouts", "description"=>"Slather in oil, then roast for 20 minutes", "quantity"=>nil, "price"=>nil, "sku"=>nil, "product"=>{"id"=>"1", "name"=>"Roasted Brussel Sprouts", "sku"=>nil, "description"=>"Slather in oil, then roast for 20 minutes", "price"=>nil, "quantity"=>nil}}
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: id
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "products" SET "name" = $1, "description" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["name", "Roasted Brussel Sprouts"], ["description", "Slather in oil, then roast for 20 minutes"], ["updated_at", "2015-05-16 23:10:39.795066"], ["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 204 No Content in 8ms (ActiveRecord: 1.7ms)
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-16 16:10:39 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (0.5ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2015-05-16 16:10:40 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+Started GET "/products?format=json&keywords=Roasted" for 127.0.0.1 at 2015-05-16 16:10:42 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"Roasted"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%Roasted%')
+  Rendered products/_product.json.jbuilder (0.4ms)
+  Rendered products/index.json.jbuilder (1.7ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-16 16:10:42 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (0.9ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+Started DELETE "/products/1?format=json" for 127.0.0.1 at 2015-05-16 16:10:42 -0700
+Processing by ProductsController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "products" WHERE "products"."id" = $1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 5ms (ActiveRecord: 2.0ms)
+Started GET "/products?format=json&keywords=Roasted" for 127.0.0.1 at 2015-05-16 16:10:42 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"Roasted"}
+  [1m[35mProduct Load (0.9ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%Roasted%')
+  Rendered products/index.json.jbuilder (2.0ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.9ms)
+  [1m[36mProduct Load (3.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."name" = $1 LIMIT 1[0m  [["name", "Roasted Brussel Sprouts"]]
+  [1m[35m (1.8ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL
+  [1m[36m (3.5ms)[0m  [1mTRUNCATE TABLE "public"."products" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "products" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Baked Potato w/ Cheese"], ["description", "nuke for 20 minutes"], ["created_at", "2015-05-16 23:10:44.284038"], ["updated_at", "2015-05-16 23:10:44.284038"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "products" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Baked Brussel Sprouts"], ["description", "Slather in oil, and roast on high heat for 20 minutes"], ["created_at", "2015-05-16 23:10:44.288552"], ["updated_at", "2015-05-16 23:10:44.288552"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Started GET "/" for 127.0.0.1 at 2015-05-16 16:10:44 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+Started GET "/products?format=json&keywords=baked" for 127.0.0.1 at 2015-05-16 16:10:45 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"baked"}
+  [1m[36mProduct Load (1.8ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%baked%')[0m
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/index.json.jbuilder (4.2ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.8ms)
+Started GET "/products/2?format=json" for 127.0.0.1 at 2015-05-16 16:10:46 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (0.7ms)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+Started GET "/products?format=json&keywords=baked" for 127.0.0.1 at 2015-05-16 16:10:47 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"baked"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%baked%')[0m
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/index.json.jbuilder (1.8ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL
+  [1m[36m (4.1ms)[0m  [1mTRUNCATE TABLE "public"."products" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (3.4ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL

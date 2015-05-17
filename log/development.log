@@ -3404,3 +3404,3058 @@ close TCPSocket(127.0.0.1, 58973)
 close TCPSocket(fe80::1%lo0, 58973)
 going to shutdown ...
 WEBrick::HTTPServer#start done.
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 14:36:50 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 152ms (Views: 151.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 14:36:51 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 14:36:51 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 14:36:51 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 14:36:51 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 14:36:51 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 14:36:51 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 14:36:51 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 14:36:51 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 14:36:51 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 14:36:51 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 14:36:51 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 14:36:51 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 14:36:51 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 14:36:51 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 14:36:51 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-05-16 14:36:51 -0700
+
+
+Started POST "/products?format=json" for 127.0.0.1 at 2015-05-16 14:36:57 -0700
+Processing by ProductsController#create as JSON
+  Parameters: {"name"=>"test", "description"=>"test", "product"=>{"name"=>"test"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "test"], ["created_at", "2015-05-16 21:36:57.453022"], ["updated_at", "2015-05-16 21:36:57.453022"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  Rendered products/_product.json.jbuilder (3.9ms)
+  Rendered products/show.json.jbuilder (21.4ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 11.5ms)
+
+ActionView::Template::Error (undefined method `description' for #<Product:0x007fa73b522fd0>):
+    1: json.(product, :id, :name, :description, :quantity, :price, :sku)
+  app/views/products/_product.json.jbuilder:1:in `_app_views_products__product_json_jbuilder___2855129294857366250_70178148259860'
+  app/views/products/show.json.jbuilder:1:in `_app_views_products_show_json_jbuilder___2138591197133685424_70178148308460'
+  app/controllers/products_controller.rb:19:in `create'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 14:38:38 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 14:38:38 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 12ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apple-touch-icon-precomposed.png" for 127.0.0.1 at 2015-05-16 14:38:38 -0700
+
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/pbl3/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/pbl3/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/pbl3/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.4ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.4ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (171.6ms)
+
+
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2015-05-16 14:38:38 -0700
+
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/pbl3/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/pbl3/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/pbl3/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.4ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.5ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (189.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 14:43:01 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 383ms (Views: 382.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:02 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:03 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:03 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:03 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:03 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:03 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:03 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:03 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:03 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 14:43:03 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-05-16 14:43:03 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-05-16 14:43:04 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 14:44:00 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 206ms (Views: 205.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 14:44:00 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 14:44:00 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 14:44:00 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 14:44:00 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 14:44:00 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 14:44:00 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 14:44:00 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 14:44:00 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 14:44:00 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 14:44:00 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 14:44:00 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 14:44:00 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 14:44:00 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 14:44:00 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 14:44:00 -0700
+
+
+Started POST "/products?format=json" for 127.0.0.1 at 2015-05-16 14:44:11 -0700
+Processing by ProductsController#create as JSON
+  Parameters: {"name"=>"test", "description"=>"test", "product"=>{"name"=>"test"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "test"], ["created_at", "2015-05-16 21:44:11.963024"], ["updated_at", "2015-05-16 21:44:11.963024"]]
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+  Rendered products/_product.json.jbuilder (5.9ms)
+  Rendered products/show.json.jbuilder (13.2ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 12.0ms)
+
+ActionView::Template::Error (undefined method `description' for #<Product:0x007fd26ba06280>):
+    1: json.(product, :id, :name, 	:description, :quantity, :price, :sku)
+  app/views/products/_product.json.jbuilder:1:in `_app_views_products__product_json_jbuilder___1756437346361360533_70270889591740'
+  app/views/products/show.json.jbuilder:1:in `_app_views_products_show_json_jbuilder__2012889474982441609_70270899868540'
+  app/controllers/products_controller.rb:19:in `create'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.7ms)
+WEBrick 1.3.1
+ruby 2.2.0 (2014-12-25) [x86_64-darwin14]
+Rack::Handler::WEBrick is mounted on /.
+WEBrick::HTTPServer#start: pid=97181 port=64491
+accept: 127.0.0.1:64495
+close: 127.0.0.1:64495
+accept: 127.0.0.1:64496
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/teaspoon/default?reporter=Console" for 127.0.0.1 at 2015-05-16 16:12:27 -0700
+Processing by Teaspoon::SuiteController#show as HTML
+  Parameters: {"reporter"=>"Console", "suite"=>"default"}
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/teaspoon-1.0.2/app/views/teaspoon/suite/_boot.html.erb (450.0ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/teaspoon-1.0.2/app/views/teaspoon/suite/_body.html.erb (0.3ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/teaspoon-1.0.2/app/views/teaspoon/suite/show.html.erb (491.9ms)
+Completed 200 OK in 502ms (Views: 501.5ms | ActiveRecord: 0.0ms)
+accept: 127.0.0.1:64497
+Rack::Handler::WEBrick is invoked.
+
+accept: 127.0.0.1:64500
+accept: 127.0.0.1:64498
+
+accept: 127.0.0.1:64501
+accept: 127.0.0.1:64499
+Started GET "/assets/teaspoon.css?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+Rack::Handler::WEBrick is invoked.
+Rack::Handler::WEBrick is invoked.
+
+Rack::Handler::WEBrick is invoked.
+Rack::Handler::WEBrick is invoked.
+
+Rack::Handler::WEBrick is invoked.
+Started GET "/assets/jasmine/1.3.1.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/support/bind-poly.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+
+Rack::Handler::WEBrick is invoked.
+
+Started GET "/assets/teaspoon-jasmine1.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+
+Rack::Handler::WEBrick is invoked.
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+Rack::Handler::WEBrick is invoked.
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+Rack::Handler::WEBrick is invoked.
+
+Rack::Handler::WEBrick is invoked.
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+
+Rack::Handler::WEBrick is invoked.
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+
+
+Started GET "/assets/angular-mocks/angular-mocks.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+
+
+Started GET "/assets/spec_helper.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+
+
+Started GET "/assets/controllers/ProductController_spec.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+
+
+Started GET "/assets/controllers/ProductsController_spec.js?body=1" for 127.0.0.1 at 2015-05-16 16:12:28 -0700
+close: 127.0.0.1:64498
+close: 127.0.0.1:64499
+close: 127.0.0.1:64496
+close: 127.0.0.1:64497
+close: 127.0.0.1:64501
+close: 127.0.0.1:64500
+close TCPSocket(::1, 64491)
+close TCPSocket(127.0.0.1, 64491)
+close TCPSocket(fe80::1%lo0, 64491)
+going to shutdown ...
+WEBrick::HTTPServer#start done.
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 16:13:23 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 135ms (Views: 134.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 16:13:23 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 16:13:23 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 16:13:23 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 16:13:23 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 16:13:23 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 16:13:23 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 16:13:23 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 16:13:23 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 16:13:23 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 16:13:23 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 16:13:23 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 16:13:23 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 16:13:23 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 16:13:23 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 16:13:23 -0700
+
+
+Started POST "/products?format=json" for 127.0.0.1 at 2015-05-16 16:13:32 -0700
+Processing by ProductsController#create as JSON
+  Parameters: {"name"=>"asdf", "description"=>"asdf", "quantity"=>"1", "sku"=>"asd", "price"=>"1", "product"=>{"name"=>"asdf"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "asdf"], ["created_at", "2015-05-16 23:13:32.834872"], ["updated_at", "2015-05-16 23:13:32.834872"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  Rendered products/_product.json.jbuilder (7.3ms)
+  Rendered products/show.json.jbuilder (14.8ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 17.7ms)
+
+ActionView::Template::Error (undefined method `description' for #<Product:0x007ff680d1bd60>):
+    1: json.(product,:id,:name,:description,:quantity,:price,:sku)
+  app/views/products/_product.json.jbuilder:1:in `_app_views_products__product_json_jbuilder__4401395715362733367_70348351063680'
+  app/views/products/show.json.jbuilder:1:in `_app_views_products_show_json_jbuilder___1745222443171194548_70348350738880'
+  app/controllers/products_controller.rb:19:in `create'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.2ms)
+
+
+Started POST "/products?format=json" for 127.0.0.1 at 2015-05-16 16:38:49 -0700
+Processing by ProductsController#create as JSON
+  Parameters: {"name"=>"asdf", "description"=>"asdf", "quantity"=>"1", "sku"=>"sdf", "price"=>"4", "product"=>{"name"=>"asdf"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "products" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "asdf"], ["created_at", "2015-05-16 23:38:49.674212"], ["updated_at", "2015-05-16 23:38:49.674212"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  Rendered products/_product.json.jbuilder (3.4ms)
+  Rendered products/show.json.jbuilder (8.0ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 7.6ms)
+
+ActionView::Template::Error (undefined method `description' for #<Product:0x007ff681a783c8>):
+    1: json.(product,:id,:name,:description,:quantity,:price,:sku)
+  app/views/products/_product.json.jbuilder:1:in `_app_views_products__product_json_jbuilder__4401395715362733367_70348351063680'
+  app/views/products/show.json.jbuilder:1:in `_app_views_products_show_json_jbuilder___1745222443171194548_70348350738880'
+  app/controllers/products_controller.rb:19:in `create'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.3ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (77.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 16:57:12 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.1) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.1) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/pbl3/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/pbl3/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/pbl3/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProducts (20150516235455)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (19.7ms)[0m  [1mCREATE TABLE "products" ("id" serial primary key, "name" character varying, "description" text, "quantity" integer, "price" decimal, "sku" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+PG::DuplicateTable: ERROR:  relation "products" already exists
+: CREATE TABLE "products" ("id" serial primary key, "name" character varying, "description" text, "quantity" integer, "price" decimal, "sku" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (5.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (2.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProducts (20150516235455)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (11.1ms)[0m  [1mCREATE TABLE "products" ("id" serial primary key, "name" character varying, "description" text, "quantity" integer, "price" decimal, "sku" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150516235455"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (7.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'products'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 16:58:40 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 180ms (Views: 180.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 16:58:41 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 16:58:41 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 16:58:41 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 16:58:41 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 16:58:41 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 16:58:41 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 16:58:41 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 16:58:41 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 16:58:41 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 16:58:41 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 16:58:41 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 16:58:41 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 16:58:41 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 16:58:41 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 16:58:41 -0700
+
+
+Started POST "/products?format=json" for 127.0.0.1 at 2015-05-16 16:58:49 -0700
+Processing by ProductsController#create as JSON
+  Parameters: {"name"=>"tes", "description"=>"test", "quantity"=>"1", "sku"=>"test", "price"=>"2", "product"=>{"name"=>"tes", "description"=>"test", "quantity"=>"1", "price"=>"2", "sku"=>"test"}}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (4.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "sku", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "tes"], ["description", "test"], ["quantity", 1], ["sku", "test"], ["price", "2.0"], ["created_at", "2015-05-16 23:58:49.227927"], ["updated_at", "2015-05-16 23:58:49.227927"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  Rendered products/_product.json.jbuilder (0.5ms)
+  Rendered products/show.json.jbuilder (13.3ms)
+Completed 201 Created in 63ms (Views: 26.7ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-16 16:58:49 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.9ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (1.4ms)
+Completed 200 OK in 33ms (Views: 17.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products?format=json&keywords=t" for 127.0.0.1 at 2015-05-16 16:58:54 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"t"}
+  [1m[35mProduct Load (3.2ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%t%')
+  Rendered products/_product.json.jbuilder (0.7ms)
+  Rendered products/index.json.jbuilder (6.7ms)
+Completed 200 OK in 20ms (Views: 15.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-16 16:58:57 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (1.4ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-16 16:59:00 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.4ms)
+  Rendered products/show.json.jbuilder (2.7ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.6ms)
+WEBrick 1.3.1
+ruby 2.2.0 (2014-12-25) [x86_64-darwin14]
+Rack::Handler::WEBrick is mounted on /.
+WEBrick::HTTPServer#start: pid=98026 port=50417
+accept: 127.0.0.1:50421
+close: 127.0.0.1:50421
+accept: 127.0.0.1:50429
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/teaspoon/default?reporter=Console" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Teaspoon::SuiteController#show as HTML
+  Parameters: {"reporter"=>"Console", "suite"=>"default"}
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/teaspoon-1.0.2/app/views/teaspoon/suite/_boot.html.erb (278.7ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/teaspoon-1.0.2/app/views/teaspoon/suite/_body.html.erb (0.5ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/teaspoon-1.0.2/app/views/teaspoon/suite/show.html.erb (320.8ms)
+Completed 200 OK in 331ms (Views: 331.0ms | ActiveRecord: 0.0ms)
+accept: 127.0.0.1:50432
+accept: 127.0.0.1:50434
+accept: 127.0.0.1:50433
+accept: 127.0.0.1:50435
+accept: 127.0.0.1:50436
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/jasmine/1.3.1.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+Rack::Handler::WEBrick is invoked.
+Rack::Handler::WEBrick is invoked.
+Rack::Handler::WEBrick is invoked.
+Rack::Handler::WEBrick is invoked.
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/teaspoon-jasmine1.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/teaspoon.css?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+
+
+Started GET "/assets/support/bind-poly.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+Rack::Handler::WEBrick is invoked.
+Rack::Handler::WEBrick is invoked.
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+Rack::Handler::WEBrick is invoked.
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+
+Rack::Handler::WEBrick is invoked.
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+Rack::Handler::WEBrick is invoked.
+Rack::Handler::WEBrick is invoked.
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/angular-mocks/angular-mocks.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+
+
+Started GET "/assets/spec_helper.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+
+
+Started GET "/assets/controllers/ProductController_spec.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+
+
+Started GET "/assets/controllers/ProductsController_spec.js?body=1" for 127.0.0.1 at 2015-05-16 16:59:15 -0700
+close: 127.0.0.1:50432
+close: 127.0.0.1:50433
+close: 127.0.0.1:50436
+close: 127.0.0.1:50435
+close: 127.0.0.1:50434
+close: 127.0.0.1:50429
+close TCPSocket(::1, 50417)
+close TCPSocket(127.0.0.1, 50417)
+close TCPSocket(fe80::1%lo0, 50417)
+going to shutdown ...
+WEBrick::HTTPServer#start done.
+WEBrick 1.3.1
+ruby 2.2.0 (2014-12-25) [x86_64-darwin14]
+Rack::Handler::WEBrick is mounted on /.
+WEBrick::HTTPServer#start: pid=98047 port=50467
+accept: 127.0.0.1:50471
+close: 127.0.0.1:50471
+accept: 127.0.0.1:50472
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/teaspoon/default?reporter=Console" for 127.0.0.1 at 2015-05-16 17:00:06 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Teaspoon::SuiteController#show as HTML
+  Parameters: {"reporter"=>"Console", "suite"=>"default"}
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/teaspoon-1.0.2/app/views/teaspoon/suite/_boot.html.erb (466.7ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/teaspoon-1.0.2/app/views/teaspoon/suite/_body.html.erb (0.5ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/teaspoon-1.0.2/app/views/teaspoon/suite/show.html.erb (510.8ms)
+Completed 200 OK in 521ms (Views: 520.7ms | ActiveRecord: 0.0ms)
+accept: 127.0.0.1:50473
+accept: 127.0.0.1:50475
+Rack::Handler::WEBrick is invoked.
+accept: 127.0.0.1:50477
+accept: 127.0.0.1:50474
+accept: 127.0.0.1:50476
+
+
+Started GET "/assets/teaspoon.css?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+Rack::Handler::WEBrick is invoked.
+Rack::Handler::WEBrick is invoked.
+Rack::Handler::WEBrick is invoked.
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/support/bind-poly.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/teaspoon-jasmine1.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+Rack::Handler::WEBrick is invoked.
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/jasmine/1.3.1.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+
+
+Rack::Handler::WEBrick is invoked.
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+
+
+Rack::Handler::WEBrick is invoked.
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+
+Rack::Handler::WEBrick is invoked.
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+Rack::Handler::WEBrick is invoked.
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+Rack::Handler::WEBrick is invoked.
+
+Rack::Handler::WEBrick is invoked.
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+
+
+Started GET "/assets/angular-mocks/angular-mocks.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+
+
+Started GET "/assets/spec_helper.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+
+
+Started GET "/assets/controllers/ProductController_spec.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+
+
+Started GET "/assets/controllers/ProductsController_spec.js?body=1" for 127.0.0.1 at 2015-05-16 17:00:07 -0700
+close: 127.0.0.1:50473
+close: 127.0.0.1:50477
+close: 127.0.0.1:50474
+close: 127.0.0.1:50475
+close: 127.0.0.1:50472
+close: 127.0.0.1:50476
+close TCPSocket(::1, 50467)
+close TCPSocket(127.0.0.1, 50467)
+close TCPSocket(fe80::1%lo0, 50467)
+going to shutdown ...
+WEBrick::HTTPServer#start done.
+
+
+Started GET "/products?format=json&keywords=t" for 127.0.0.1 at 2015-05-16 17:07:31 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"t"}
+  [1m[35mProduct Load (1.1ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%t%')
+  Rendered products/_product.json.jbuilder (0.5ms)
+  Rendered products/index.json.jbuilder (23.1ms)
+Completed 200 OK in 38ms (Views: 29.9ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/products?format=json" for 127.0.0.1 at 2015-05-16 17:07:44 -0700
+Processing by ProductsController#create as JSON
+  Parameters: {"name"=>"help", "description"=>"me", "quantity"=>"1", "sku"=>"test", "price"=>"4", "product"=>{"name"=>"help", "description"=>"me", "quantity"=>"1", "price"=>"4", "sku"=>"test"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "products" ("name", "description", "quantity", "sku", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "help"], ["description", "me"], ["quantity", 1], ["sku", "test"], ["price", "4.0"], ["created_at", "2015-05-17 00:07:44.654932"], ["updated_at", "2015-05-17 00:07:44.654932"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  Rendered products/_product.json.jbuilder (0.3ms)
+  Rendered products/show.json.jbuilder (1.5ms)
+Completed 201 Created in 22ms (Views: 8.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/products/2?format=json" for 127.0.0.1 at 2015-05-16 17:07:44 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (1.0ms)
+Completed 200 OK in 21ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products?format=json&keywords=t" for 127.0.0.1 at 2015-05-16 17:07:48 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"t"}
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%t%')[0m
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/index.json.jbuilder (3.4ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products?format=json&keywords=h" for 127.0.0.1 at 2015-05-16 17:08:01 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"h"}
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%h%')
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/index.json.jbuilder (15.3ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 17:08:08 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 139ms (Views: 139.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 17:08:11 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 17:08:11 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:08:11 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:08:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:08:11 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:08:11 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:08:11 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:08:11 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:08:11 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:08:11 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:08:11 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:08:11 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:08:11 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:08:11 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:08:12 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:08:12 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:08:12 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:08:12 -0700
+
+
+Started GET "/products?format=json&keywords=t" for 127.0.0.1 at 2015-05-16 17:15:31 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"t"}
+  [1m[36mProduct Load (0.9ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%t%')[0m
+  Rendered products/_product.json.jbuilder (1.2ms)
+  Rendered products/index.json.jbuilder (16.7ms)
+Completed 200 OK in 38ms (Views: 28.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-16 17:15:33 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (1.9ms)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-16 17:15:34 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (7.2ms)
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/products/1?format=json" for 127.0.0.1 at 2015-05-16 17:16:42 -0700
+Processing by ProductsController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (1.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "products" WHERE "products"."id" = $1  [["id", 1]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 11ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/products?format=json&keywords=t" for 127.0.0.1 at 2015-05-16 17:16:42 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"t"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%t%')
+  Rendered products/index.json.jbuilder (2.4ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products?format=json&keywords=te" for 127.0.0.1 at 2015-05-16 17:16:45 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"te"}
+  [1m[36mProduct Load (1.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%te%')[0m
+  Rendered products/index.json.jbuilder (3.5ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products?format=json&keywords=test" for 127.0.0.1 at 2015-05-16 17:16:49 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"test"}
+  [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%test%')
+  Rendered products/index.json.jbuilder (3.8ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products?format=json&keywords=t" for 127.0.0.1 at 2015-05-16 17:16:51 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"t"}
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%t%')[0m
+  Rendered products/index.json.jbuilder (1.6ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/products?format=json" for 127.0.0.1 at 2015-05-16 17:17:02 -0700
+Processing by ProductsController#create as JSON
+  Parameters: {"name"=>"P1", "description"=>"123", "quantity"=>"12", "sku"=>"12", "price"=>"123", "product"=>{"name"=>"P1", "description"=>"123", "quantity"=>"12", "price"=>"123", "sku"=>"12"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "products" ("name", "description", "quantity", "sku", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "P1"], ["description", "123"], ["quantity", 12], ["sku", "12"], ["price", "123.0"], ["created_at", "2015-05-17 00:17:02.902397"], ["updated_at", "2015-05-17 00:17:02.902397"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (2.1ms)
+Completed 201 Created in 25ms (Views: 16.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/products/3?format=json" for 127.0.0.1 at 2015-05-16 17:17:02 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered products/_product.json.jbuilder (0.6ms)
+  Rendered products/show.json.jbuilder (1.8ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products?format=json&keywords=t" for 127.0.0.1 at 2015-05-16 17:17:05 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"t"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%t%')
+  Rendered products/index.json.jbuilder (1.5ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products?format=json&keywords=p" for 127.0.0.1 at 2015-05-16 17:17:09 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"p"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%p%')[0m
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/index.json.jbuilder (3.3ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/2?format=json" for 127.0.0.1 at 2015-05-16 17:17:18 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.9ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (1.1ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/2?format=json" for 127.0.0.1 at 2015-05-16 17:17:19 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (0.9ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products?format=json&keywords=p" for 127.0.0.1 at 2015-05-16 17:17:20 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"p"}
+  [1m[35mProduct Load (1.8ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%p%')
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/_product.json.jbuilder (0.3ms)
+  Rendered products/index.json.jbuilder (8.3ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/products/3?format=json" for 127.0.0.1 at 2015-05-16 17:17:23 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (1.5ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/3?format=json" for 127.0.0.1 at 2015-05-16 17:17:24 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered products/_product.json.jbuilder (0.7ms)
+  Rendered products/show.json.jbuilder (2.2ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products?format=json&keywords=p" for 127.0.0.1 at 2015-05-16 17:17:34 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"p"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%p%')[0m
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/index.json.jbuilder (4.5ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 17:19:13 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 234ms (Views: 233.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:19:14 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:19:14 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:19:14 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:19:14 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:19:14 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:19:14 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:19:14 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:19:14 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:19:14 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:19:14 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:19:14 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:19:14 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:19:15 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:19:15 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:19:15 -0700
+
+
+Started GET "/products?format=json&keywords=p" for 127.0.0.1 at 2015-05-16 17:19:15 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"p"}
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%p%')
+  Rendered products/_product.json.jbuilder (1.1ms)
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/index.json.jbuilder (27.7ms)
+Completed 200 OK in 41ms (Views: 33.0ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/products/3?format=json" for 127.0.0.1 at 2015-05-16 17:19:37 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered products/_product.json.jbuilder (0.4ms)
+  Rendered products/show.json.jbuilder (2.2ms)
+Completed 200 OK in 22ms (Views: 10.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/3?format=json" for 127.0.0.1 at 2015-05-16 17:19:40 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (1.0ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products?format=json&keywords=p" for 127.0.0.1 at 2015-05-16 17:19:41 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"p"}
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%p%')[0m
+  Rendered products/_product.json.jbuilder (0.7ms)
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/index.json.jbuilder (5.7ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 17:21:25 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 408ms (Views: 407.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:21:26 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:21:26 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:21:26 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:21:26 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:21:26 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:21:26 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:21:26 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:21:26 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:21:26 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:21:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:21:26 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:21:27 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:21:27 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:21:27 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:21:27 -0700
+
+
+Started GET "/products?format=json&keywords=p" for 127.0.0.1 at 2015-05-16 17:21:27 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"p"}
+  [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%p%')
+  Rendered products/_product.json.jbuilder (0.5ms)
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/index.json.jbuilder (34.1ms)
+Completed 200 OK in 45ms (Views: 36.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/products/2?format=json" for 127.0.0.1 at 2015-05-16 17:21:32 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered products/_product.json.jbuilder (2.3ms)
+  Rendered products/show.json.jbuilder (7.5ms)
+Completed 200 OK in 39ms (Views: 19.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/2?format=json" for 127.0.0.1 at 2015-05-16 17:21:33 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered products/_product.json.jbuilder (0.3ms)
+  Rendered products/show.json.jbuilder (1.9ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products?format=json&keywords=p" for 127.0.0.1 at 2015-05-16 17:21:36 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"p"}
+  [1m[36mProduct Load (1.6ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%p%')[0m
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/index.json.jbuilder (6.1ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 17:22:56 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 399ms (Views: 398.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:22:57 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:22:57 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:22:57 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:22:57 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:22:57 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:22:57 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:22:57 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:22:57 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:22:57 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:22:57 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:22:57 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:22:57 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:22:57 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:22:57 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:22:57 -0700
+
+
+Started GET "/products?format=json&keywords=p" for 127.0.0.1 at 2015-05-16 17:22:57 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"p"}
+  [1m[35mProduct Load (1.7ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%p%')
+  Rendered products/_product.json.jbuilder (3.4ms)
+  Rendered products/_product.json.jbuilder (0.5ms)
+  Rendered products/index.json.jbuilder (63.7ms)
+Completed 200 OK in 86ms (Views: 71.6ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/products?format=json&keywords=h" for 127.0.0.1 at 2015-05-16 17:23:07 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"h"}
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%h%')[0m
+  Rendered products/_product.json.jbuilder (0.3ms)
+  Rendered products/index.json.jbuilder (5.1ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products?format=json&keywords=p" for 127.0.0.1 at 2015-05-16 17:23:10 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"p"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%p%')
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/index.json.jbuilder (3.6ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 17:23:14 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:23:14 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:14 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:14 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:14 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:14 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:14 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:14 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:14 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:14 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:14 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:14 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:14 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:14 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:14 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:14 -0700
+
+
+Started GET "/products/2?format=json" for 127.0.0.1 at 2015-05-16 17:23:20 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered products/_product.json.jbuilder (1.3ms)
+  Rendered products/show.json.jbuilder (3.4ms)
+Completed 200 OK in 30ms (Views: 16.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 17:23:26 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:26 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:23:26 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:26 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:26 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:26 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:26 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:26 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:26 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:26 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:26 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:26 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:26 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:26 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:23:26 -0700
+
+
+Started GET "/products/2?format=json" for 127.0.0.1 at 2015-05-16 17:24:28 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (1.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (1.3ms)
+Completed 200 OK in 18ms (Views: 14.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-05-16 17:24:31 -0700
+
+
+Started GET "/products?format=json&keywords=p" for 127.0.0.1 at 2015-05-16 17:24:34 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"p"}
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%p%')[0m
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/index.json.jbuilder (4.2ms)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 17:29:57 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (SyntaxError: [stdin]:15:80: unmatched OUTDENT
+  (in /Users/pbl3/Development/cohub-test-store/app/assets/javascripts/controllers/ProductsController.coffee)):
+    3: <head>
+    4:   <title>Cohub Test Store</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___2948920457792894298_70164539241920'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 17:30:27 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (SyntaxError: [stdin]:15:80: unmatched OUTDENT
+  (in /Users/pbl3/Development/cohub-test-store/app/assets/javascripts/controllers/ProductsController.coffee)):
+    3: <head>
+    4:   <title>Cohub Test Store</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___2948920457792894298_70164539241920'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 17:30:39 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (SyntaxError: [stdin]:15:80: unmatched OUTDENT
+  (in /Users/pbl3/Development/cohub-test-store/app/assets/javascripts/controllers/ProductsController.coffee)):
+    3: <head>
+    4:   <title>Cohub Test Store</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1984315692707243124_70156232570740'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.6ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 17:31:36 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (SyntaxError: [stdin]:15:76: unmatched OUTDENT
+  (in /Users/pbl3/Development/cohub-test-store/app/assets/javascripts/controllers/ProductsController.coffee)):
+    3: <head>
+    4:   <title>Cohub Test Store</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__3537997715387034335_70208203642560'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.8ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 17:37:12 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 408ms (Views: 407.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:37:13 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:13 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:13 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:13 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:13 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:13 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:13 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:13 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:13 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:13 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:13 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:13 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:13 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:13 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:13 -0700
+
+
+Started GET "/?keywords=" for 127.0.0.1 at 2015-05-16 17:37:18 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"keywords"=>""}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:37:18 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:18 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:18 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:18 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:18 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:18 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:18 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:18 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:18 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:18 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:18 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:18 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:18 -0700
+
+
+Started GET "/?keywords=s" for 127.0.0.1 at 2015-05-16 17:37:23 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"keywords"=>"s"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:37:23 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:23 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:23 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:23 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:23 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:23 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:23 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:23 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:23 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:23 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:23 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:24 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:24 -0700
+
+
+Started GET "/?keywords=p" for 127.0.0.1 at 2015-05-16 17:37:26 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"keywords"=>"p"}
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 26ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:26 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:37:26 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:26 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:26 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:26 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:26 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:26 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:26 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:26 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:26 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:26 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:26 -0700
+
+
+Started GET "/?keywords=" for 127.0.0.1 at 2015-05-16 17:37:30 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"keywords"=>""}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:37:30 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:30 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:30 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:30 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:30 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:30 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:30 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:30 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:30 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:30 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:30 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:30 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:30 -0700
+
+
+Started GET "/?keywords=asdf" for 127.0.0.1 at 2015-05-16 17:37:47 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"keywords"=>"asdf"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:37:47 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:47 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:47 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:47 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:47 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:47 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:47 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:47 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:47 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:47 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:47 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:47 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:37:47 -0700
+
+
+Started GET "/?keywords=asdf" for 127.0.0.1 at 2015-05-16 17:38:15 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Parameters: {"keywords"=>"asdf"}
+  Rendered home/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 543ms (Views: 542.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:16 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:38:16 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:16 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:16 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:16 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:16 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:16 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:16 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:16 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:16 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:16 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:16 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:17 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:17 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:17 -0700
+
+
+Started GET "/?keywords=asdf" for 127.0.0.1 at 2015-05-16 17:38:17 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"keywords"=>"asdf"}
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-05-16 17:38:17 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:38:17 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:17 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:17 -0700
+
+
+Started GET "/?keywords=" for 127.0.0.1 at 2015-05-16 17:38:19 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"keywords"=>""}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:38:19 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:19 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:19 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:19 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:19 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:19 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:19 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:19 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:19 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:19 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:19 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:19 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:19 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:19 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:19 -0700
+
+
+Started GET "/?keywords=a" for 127.0.0.1 at 2015-05-16 17:38:21 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"keywords"=>"a"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:38:22 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:22 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:22 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:22 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:22 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:22 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:22 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:22 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:22 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:22 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:22 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:22 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:22 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:22 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:22 -0700
+
+
+Started GET "/?keywords=" for 127.0.0.1 at 2015-05-16 17:38:22 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"keywords"=>""}
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:38:23 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:23 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:23 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:23 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:23 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:23 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:23 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:23 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:23 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:23 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:23 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:23 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:23 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:23 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:23 -0700
+
+
+Started GET "/?keywords=p" for 127.0.0.1 at 2015-05-16 17:38:25 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"keywords"=>"p"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:38:25 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:25 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:25 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:25 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:25 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:25 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:25 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:25 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:25 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:25 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:25 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:25 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:25 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:25 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:25 -0700
+
+
+Started GET "/?keywords=" for 127.0.0.1 at 2015-05-16 17:38:27 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"keywords"=>""}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 12ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:38:28 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:28 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:28 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:28 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:28 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:28 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:28 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:28 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:28 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:28 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:28 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:28 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:28 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:28 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:28 -0700
+
+
+Started GET "/?keywords=a" for 127.0.0.1 at 2015-05-16 17:38:33 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"keywords"=>"a"}
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:34 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:38:34 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:34 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:34 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:34 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:34 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:34 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:34 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:34 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:34 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:34 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:34 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:34 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:38:34 -0700
+
+
+Started GET "/?keywords=a" for 127.0.0.1 at 2015-05-16 17:39:06 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Parameters: {"keywords"=>"a"}
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 300ms (Views: 299.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:39:06 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:06 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:06 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:06 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:06 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:06 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:06 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:06 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:06 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:06 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:06 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:06 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:06 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:06 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:07 -0700
+
+
+Started GET "/products?format=json&keywords=t" for 127.0.0.1 at 2015-05-16 17:39:07 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"t"}
+  [1m[35mProduct Load (2.3ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%t%')
+  Rendered products/index.json.jbuilder (10.7ms)
+Completed 200 OK in 28ms (Views: 20.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/?keywords=a" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"keywords"=>"a"}
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+
+
+Started GET "/products?format=json&keywords=t" for 127.0.0.1 at 2015-05-16 17:39:08 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"t"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%t%')[0m
+  Rendered products/index.json.jbuilder (1.4ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products?format=json&keywords=a" for 127.0.0.1 at 2015-05-16 17:39:09 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"a"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%a%')
+  Rendered products/index.json.jbuilder (1.4ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products?format=json&keywords=p" for 127.0.0.1 at 2015-05-16 17:39:12 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"p"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%p%')[0m
+  Rendered products/_product.json.jbuilder (3.4ms)
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/index.json.jbuilder (45.5ms)
+Completed 200 OK in 57ms (Views: 51.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/products/2?format=json" for 127.0.0.1 at 2015-05-16 17:39:14 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered products/_product.json.jbuilder (1.3ms)
+  Rendered products/show.json.jbuilder (5.9ms)
+Completed 200 OK in 30ms (Views: 14.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/2?format=json" for 127.0.0.1 at 2015-05-16 17:39:16 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered products/_product.json.jbuilder (0.5ms)
+  Rendered products/show.json.jbuilder (1.9ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/2?format=json" for 127.0.0.1 at 2015-05-16 17:39:20 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (1.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products?format=json&keywords=p" for 127.0.0.1 at 2015-05-16 17:39:23 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"p"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE (name ilike '%p%')[0m
+  Rendered products/_product.json.jbuilder (0.4ms)
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/index.json.jbuilder (4.1ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?keywords=a" for 127.0.0.1 at 2015-05-16 17:41:05 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Parameters: {"keywords"=>"a"}
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 199ms (Views: 198.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:41:05 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:05 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:05 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:05 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:05 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:05 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:05 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:05 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:05 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:05 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:06 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:06 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:06 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:06 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:06 -0700
+
+
+Started GET "/products?format=json&keywords=p" for 127.0.0.1 at 2015-05-16 17:41:06 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"p"}
+  [1m[35mProduct Load (1.2ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%p%')
+  Rendered products/_product.json.jbuilder (1.0ms)
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/index.json.jbuilder (29.8ms)
+Completed 200 OK in 47ms (Views: 33.6ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 17:41:10 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:41:10 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:10 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:10 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:10 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:10 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:10 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:10 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:11 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:11 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:11 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:11 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:11 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:11 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:11 -0700
+
+
+Started GET "/dogs" for 127.0.0.1 at 2015-05-16 17:41:11 -0700
+
+ActionController::RoutingError (No route matches [GET] "/dogs"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/pbl3/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/pbl3/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/pbl3/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (14.4ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (179.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 17:41:19 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 17ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:19 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 17:41:19 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:19 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:19 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:19 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:19 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:19 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:19 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:19 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:19 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:19 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:19 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:19 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:20 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 17:41:20 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 18:06:38 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 181ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (SyntaxError: [stdin]:37:33: reserved word 'function'
+  (in /Users/pbl3/Development/cohub-test-store/app/assets/javascripts/app.coffee)):
+    3: <head>
+    4:   <title>Cohub Test Store</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1773942060298033556_70353937183060'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.8ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 18:07:08 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (SyntaxError: [stdin]:2:4: unmatched OUTDENT
+  (in /Users/pbl3/Development/cohub-test-store/app/assets/javascripts/directives/navbar.coffee)):
+    3: <head>
+    4:   <title>Cohub Test Store</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1326682741567650991_70176791906820'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.2ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (71.9ms)
+
+
+Started GET "/products?format=json" for 127.0.0.1 at 2015-05-16 18:19:47 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as JSON
+  [1m[35mProduct Load (5.5ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/_product.json.jbuilder (0.9ms)
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/index.json.jbuilder (48.0ms)
+Completed 200 OK in 84ms (Views: 64.7ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 18:19:53 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 232ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (SyntaxError: [stdin]:11:4: unmatched OUTDENT
+  (in /Users/pbl3/Development/cohub-test-store/app/assets/javascripts/directives/navbar.coffee)):
+    3: <head>
+    4:   <title>Cohub Test Store</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__3917998605169806165_70109013823100'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.9ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 18:19:54 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (SyntaxError: [stdin]:11:4: unmatched OUTDENT
+  (in /Users/pbl3/Development/cohub-test-store/app/assets/javascripts/directives/navbar.coffee)):
+    3: <head>
+    4:   <title>Cohub Test Store</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__3917998605169806165_70109013823100'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.0ms)
+
+
+Started GET "/products?format=json" for 127.0.0.1 at 2015-05-16 18:20:01 -0700
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/index.json.jbuilder (2.8ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 18:20:19 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (SyntaxError: [stdin]:11:4: unmatched OUTDENT
+  (in /Users/pbl3/Development/cohub-test-store/app/assets/javascripts/directives/navbar.coffee)):
+    3: <head>
+    4:   <title>Cohub Test Store</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__3917998605169806165_70109013823100'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 18:20:23 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (SyntaxError: [stdin]:11:4: unmatched OUTDENT
+  (in /Users/pbl3/Development/cohub-test-store/app/assets/javascripts/directives/navbar.coffee)):
+    3: <head>
+    4:   <title>Cohub Test Store</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__3917998605169806165_70109013823100'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (78.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-16 18:23:49 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 400ms (Views: 399.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/assets/templates/navbar.js?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/assets/directives/navbar.js?body=1" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+
+
+Started GET "/products?format=json&keywords=t" for 127.0.0.1 at 2015-05-16 18:23:50 -0700
+Processing by ProductsController#index as JSON
+  Parameters: {"keywords"=>"t"}
+  [1m[35mProduct Load (1.4ms)[0m  SELECT "products".* FROM "products" WHERE (name ilike '%t%')
+  Rendered products/index.json.jbuilder (18.1ms)
+Completed 200 OK in 44ms (Views: 34.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2015-05-16 18:23:51 -0700
+
+
+Started GET "/api/v1/products?keywords=ball" for 127.0.0.1 at 2015-05-16 19:03:59 -0700
+
+ActionController::RoutingError (No route matches [GET] "/api/v1/products"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/pbl3/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/pbl3/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/pbl3/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.4ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.8ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /Users/pbl3/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (135.9ms)

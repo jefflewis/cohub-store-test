@@ -1,3 +1,4 @@
+<navbar current-tab="Second"></navbar>
 <aside class="flash row">
   <article flash-alert duration="0" active-class="alert" class="col-md-6 col-md-offset-3">
     {{flash.message}}
@@ -32,8 +33,7 @@
       Quantity
     </label>
     <div class="col-md-5">
-      <textarea name="quantity" class="form-control" ng-model='product.quantity' placeholder="0">
-      </textarea>
+      <input ng-model="product.quantity" class="form-control" ng-pattern="/^\d+$/" name="quantity" />
     </div>
   </div>
   <div class="form-group" ng-class="{'has-warning has-feedback':errors.name}">
@@ -54,8 +54,7 @@
       Price ($)
     </label>
     <div class="col-md-5">
-      <textarea name="price" class="form-control" ng-model='product.price' placeholder="0.00">
-      </textarea>
+      <input ng-model="product.price" class="form-control" ng-pattern="/^\d+$/" name="price" />
     </div>
   </div>
   <div class="form-group">
