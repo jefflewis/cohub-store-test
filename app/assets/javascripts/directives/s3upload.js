@@ -1,8 +1,7 @@
 'use strict';
 
-var directives = angular.module('directives', []);
-
-directives.directive('file', function() {
+angular.module('cohub-test-store')
+  .directive('file', function() {
   return {
     restrict: 'AE',
     scope: {
@@ -19,6 +18,3 @@ directives.directive('file', function() {
     }
   };
 });
-
-// Access Key ID:AKIAIITEQGUZQP2UYY4A
-// Secret Access Key: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

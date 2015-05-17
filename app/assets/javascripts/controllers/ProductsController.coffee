@@ -1,3 +1,5 @@
+'use strict'
+
 controllers = angular.module('controllers')
 controllers.controller("ProductsController", [ '$scope', '$routeParams', '$location', '$resource',
   ($scope,$routeParams,$location,$resource)->

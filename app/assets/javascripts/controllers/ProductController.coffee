@@ -1,3 +1,5 @@
+'use strict'
+
 controllers = angular.module('controllers')
 controllers.controller("ProductController", [ '$scope', '$routeParams', '$resource', '$location', 'flash',
   ($scope,$routeParams,$resource,$location, flash)->
@@ -51,10 +53,18 @@ controllers.controller("ProductController", [ '$scope', '$routeParams', '$resour
         # Perform File Size Check First
         fileSize = Math.round(parseInt($scope.file.size))
         if fileSize > $scope.sizeLimit
-          toastr.error 'Sorry, your attachment is too big. <br/> Maximum ' + $scope.fileSizeLabel() + ' file attachment allowed', 'File Too Large'
+          flash.error   = 'Sorry, your attachment is too big. <br/> Maximum ' + $scope.fileSizeLabel() + ' file attachment allowed -- File Too Large'
           return false
         # Prepend Unique String To Prevent Overwrites
-        uniqueFileName = $scope.uniqueString() + '-' + $scope.file.name
+
+        text = ''
+        possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345678'
+        i = 0
+        while i < 8
+          text += possible.charAt(Math.floor(Math.random() * possible.length))
+          i++
+
+        uniqueFileName = text + '-' + $scope.file.name
         params =
           Key: uniqueFileName
           ContentType: $scope.file.type
@@ -62,11 +72,11 @@ controllers.controller("ProductController", [ '$scope', '$routeParams', '$resour
           ServerSideEncryption: 'AES256'
         bucket.putObject(params, (err, data) ->
           if err
-            toastr.error err.message, err.code
+            flash.error = err.message + err.code
             return false
           else
             # Upload Successfully Finished
-            toastr.success 'File Uploaded Successfully', 'Done'
+            flash.success 'File Uploaded Successfully', 'Done'
             # Reset The Progress Bar
             setTimeout (->
               $scope.uploadProgress = 0
@@ -80,60 +90,24 @@ controllers.controller("ProductController", [ '$scope', '$routeParams', '$resour
           return
       else
         # No File Selected
-        toastr.error 'Please select a file to upload'
-      return
+        flash.error = 'Please select a file to upload'
+    return
 
-      $scope.fileSizeLabel = ->
-        # Convert Bytes To MB
-        Math.round($scope.sizeLimit / 1024 / 1024) + 'MB'
+    $scope.fileSizeLabel = ->
+      # Convert Bytes To MB
+      return Math.round($scope.sizeLimit / 1024 / 1024) + 'MB'
 
-      $scope.uniqueString = ->
-        text = ''
-        possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-        i = 0
-        while i < 8
-          text += possible.charAt(Math.floor(Math.random() * possible.length))
-          i++
-        text
+    $scope.uniqueString = ->
+      text = ''
+      possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345678'
+      i = 0
+      while i < 8
+        text += possible.charAt(Math.floor(Math.random() * possible.length))
+        i++
+      return text
 
-
-    # $scope.upload = ->
-    #   # Configure The S3 Object
-    #   AWS.config.update
-    #     accessKeyId: $scope.creds.access_key
-    #     secretAccessKey: $scope.creds.secret_key
-    #   AWS.config.region = 'us-east-1'
-    #   bucket = new (AWS.S3)(params: Bucket: $scope.creds.bucket)
-    #   if $scope.file
-    #     params =
-    #       Key: $scope.file.name
-    #       ContentType: $scope.file.type
-    #       Body: $scope.file
-    #       ServerSideEncryption: 'AES256'
-    #     bucket.putObject(params, (err, data) ->
-    #       if err
-    #         # There Was An Error With Your S3 Config
-    #         alert err.message
-    #         return false
-    #       else
-    #         # Success!
-    #         alert 'Upload Done'
-    #       return
-    #     ).on 'httpUploadProgress', (progress) ->
-    #       # Log Progress Information
-    #       console.log Math.round(progress.loaded / progress.total * 100) + '% done'
-    #       $scope.s3_path = $scope.creds.bucket + '/' + $scope.file.name
-    #       $scope.product.image = 'https://s3.amazonaws.com/' + $scope.s3_path
-    #       return
-    #   else
-    #     # No File Selected
-    #     alert 'No File Selected'
-    #   return
-
-
-      $scope.delete = ->
-        $scope.product.$delete()
-        $scope.back()
-
+    $scope.delete = ->
+      $scope.product.$delete()
+      $scope.back()
 
 ])

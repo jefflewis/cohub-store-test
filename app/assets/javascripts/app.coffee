@@ -1,3 +1,5 @@
+'use strict'
+
 cohubTestStore = angular.module('cohub-test-store',[
   'templates',
   'ngRoute',
@@ -32,3 +34,4 @@ cohubTestStore.config([ '$routeProvider', 'flashProvider',
 ])
 
 controllers = angular.module('controllers',[])
+directives = angular.module('directives', [])
