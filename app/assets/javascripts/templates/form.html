@@ -6,74 +6,40 @@
 </aside>
 <form class="form-horizontal" role="form" class="edit-user">
   <div class="form-group" ng-class="{'has-warning has-feedback':errors.name}">
-    <label
-      for="name"
-      class="col-md-2 control-label col-md-offset-2">
-      Name
-    </label>
+    <label for="name" class="col-md-2 control-label col-md-offset-2">Name</label>
     <div class="col-md-5">
       <input type="text" name="name" class="form-control" placeholder="e.g. Baked Alaska" ng-model="product.name">
     </div>
   </div>
   <div class="form-group" ng-class="{'has-warning has-feedback':errors.name}">
-    <label
-      for="description"
-      class="col-md-2 control-label col-md-offset-2">
-      Description
-    </label>
+    <label for="description" class="col-md-2 control-label col-md-offset-2">Description</label>
     <div class="col-md-5">
-      <textarea name="description" class="form-control" ng-model='product.description' placeholder="e.g. Enter the product description">
-      </textarea>
+      <textarea name="description" class="form-control" ng-model='product.description' placeholder="e.g. Enter the product description"/>
     </div>
   </div>
   <div class="form-group" ng-class="{'has-warning has-feedback':errors.name}">
-    <label
-      for="quantity"
-      class="col-md-2 control-label col-md-offset-2">
-      Quantity
-    </label>
+    <label for="quantity" class="col-md-2 control-label col-md-offset-2">Quantity</label>
     <div class="col-md-5">
-      <input ng-model="product.quantity" class="form-control" ng-pattern="/^\d+$/" name="quantity" />
+      <input ng-model="product.quantity" type="number" class="form-control" ng-pattern="/^\d+$/" name="quantity" />
     </div>
   </div>
   <div class="form-group" ng-class="{'has-warning has-feedback':errors.name}">
-    <label
-      for="sku"
-      class="col-md-2 control-label col-md-offset-2">
-      SKU
-    </label>
+    <label for="sku" class="col-md-2 control-label col-md-offset-2">SKU</label>
     <div class="col-md-5">
-      <textarea name="sku" class="form-control" ng-model='product.sku' placeholder="CH-xxx">
-      </textarea>
+      <textarea name="sku" class="form-control" ng-model='product.sku' placeholder="CH-xxx"/>
     </div>
   </div>
   <div class="form-group" ng-class="{'has-warning has-feedback':errors.name}">
-    <label
-      for="price"
-      class="col-md-2 control-label col-md-offset-2">
-      Price ($)
-    </label>
+    <label for="price" class="col-md-2 control-label col-md-offset-2">Price ($)</label>
     <div class="col-md-5">
-      <input ng-model="product.price" class="form-control" ng-pattern="/^\d+$/" name="price" />
+      <input ng-model="product.price" type="number"class="form-control" ng-pattern="/^\d+$/" name="price" />
     </div>
-    <!-- <div>
-      <input type="file" name="avatar" onchange="angular.element(this).scope().uploadFile(this.files)" />
-      <input name="file" type="file" file />
-      <button class="btn btn-default" ng-click="upload()"> Upload</button>
-    </div> -->
     <!-- The Upload Form -->
-    <div class="col-md-8">
+    <div class="col-md-5 control-label col-md-offset-4">
       <div class="panel panel-default">
-        <div class="panel-heading">
-          <select class="fr" ng-model="sizeLimit">
-            <option value="5292880">5MB Upload Limit</option>
-            <option value="10585760">10MB Upload Limit</option>
-            <option value="15878640">15MB Upload Limit</option>
-          </select>
-          <h3 class="panel-title">Step 2: Upload The File</h3>
-        </div>
         <div class="panel-body">
-          <input class="bottom-marg-15" type="file" name="file" file></input>
+          <textarea name="image" class="form-control" ng-model='product.image'/>
+          <input class="bottom-marg-15" type="file" name="file" file>
           <!-- Progress Bar -->
           <div class="progress">
             <div class="progress-bar" role="progressbar" aria-valuenow="{{ uploadProgress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ uploadProgress }}%;">
@@ -83,7 +49,7 @@
           <a class="btn btn-primary btn-block btn-lg" ng-click="upload()">Upload</a>
         </div>
       </div>
-    </div>     
+    </div>
   </div>
   <div class="form-group">
     <div class="col-md-offset-2 col-md-3">

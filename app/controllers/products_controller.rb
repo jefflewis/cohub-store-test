@@ -11,7 +11,6 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-    # @product.image = params[:product][:image]
     @product.save
     render 'show', status: 201
   end
@@ -19,7 +18,6 @@ class ProductsController < ApplicationController
   def update
     product = Product.find(params[:id])
     product.assign_attributes(product_params)
-    # product.document = params[:product][:image]
     product.save
     head :no_content
   end

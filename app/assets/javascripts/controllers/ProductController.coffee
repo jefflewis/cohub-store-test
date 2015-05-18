@@ -41,12 +41,12 @@ controllers.controller("ProductController", [ '$scope', '$routeParams', '$resour
           ( (newProduct)-> $location.path("/products/#{newProduct.id}") ),
           onError
         )
-
+# "cohubteststore_public",AKIAIMBDUSZFFOVDO5TA,J7p4n7O3G2oDucUnZPbO4EQTO3sz6HhsqOxqXo7S
 
     $scope.upload = ->
       AWS.config.update
-        accessKeyId: 'AKIAJITSKLHVEFFSN5JQ'
-        secretAccessKey: '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'
+        accessKeyId: 'AKIAIMBDUSZFFOVDO5TA'
+        secretAccessKey: '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'
       AWS.config.region = 'us-east-1'
       bucket = new (AWS.S3)(params: Bucket: 'cohubteststoreimages')
       if $scope.file
@@ -64,6 +64,8 @@ controllers.controller("ProductController", [ '$scope', '$routeParams', '$resour
           text += possible.charAt(Math.floor(Math.random() * possible.length))
           i++
 
+        s3root = 'https://s3.amazonaws.com/cohubteststoreimages/'
+
         uniqueFileName = text + '-' + $scope.file.name
         params =
           Key: uniqueFileName
@@ -76,7 +78,11 @@ controllers.controller("ProductController", [ '$scope', '$routeParams', '$resour
             return false
           else
             # Upload Successfully Finished
-            flash.success 'File Uploaded Successfully', 'Done'
+            flash.success = 'File Uploaded Successfully!'
+
+            # set product.image
+            $scope.product.image = s3root + uniqueFileName
+
             # Reset The Progress Bar
             setTimeout (->
               $scope.uploadProgress = 0
@@ -105,6 +111,10 @@ controllers.controller("ProductController", [ '$scope', '$routeParams', '$resour
         text += possible.charAt(Math.floor(Math.random() * possible.length))
         i++
       return text
+
+    $scope.getImageUrl = ->
+      console.log($scope.product.image)
+      return $scope.product.image
 
     $scope.delete = ->
       $scope.product.$delete()
