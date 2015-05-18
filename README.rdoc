@@ -1,3 +1,3 @@
-== receta
+== Cohub Test Store
 
-This is a sample application that is a fully-deployable Rails app using AngularJS.  Read about it at http://angular-rails.com
+This is a demonstration app built to test deployment of a Rails 4 application with the front end driven by an Angular app.
