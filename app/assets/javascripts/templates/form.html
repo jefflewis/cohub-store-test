@@ -4,7 +4,15 @@
     {{flash.message}}
   </article>
 </aside>
-<form class="form-horizontal" role="form" class="edit-user">
+<form class="form-horizontal" role="form" class="edit-product">
+  <div class="form-group">
+    <div class="col-md-offset-2 col-md-7">
+      <button class="btn btn-default" ng-click="cancel()"> Cancel</button>
+    </div>
+    <div>
+      <button class="btn btn-primary" ng-click="save()"> Save </button>
+    </div>
+  </div>
   <div class="form-group" ng-class="{'has-warning has-feedback':errors.name}">
     <label for="name" class="col-md-2 control-label col-md-offset-2">Name</label>
     <div class="col-md-5">
@@ -29,20 +37,23 @@
       <textarea name="sku" class="form-control" ng-model='product.sku' placeholder="CH-xxx"/>
     </div>
   </div>
-  <div class="form-group" ng-class="{'has-warning has-feedback':errors.name}">
+  <!-- Product Price -->
+  <div class="form-group">
     <label for="price" class="col-md-2 control-label col-md-offset-2">Price ($)</label>
     <div class="col-md-5">
-      <input ng-model="product.price" type="number"class="form-control" ng-pattern="/^\d+$/" name="price" />
+      <input ng-model="product.price" type="text" class="form-control" ng-pattern="/^\d+$/" placeholder="Price">
     </div>
+  </div>
     <!-- The Upload Form -->
+  <div class="form-group" ng-class="{'has-warning has-feedback':errors.name}">
     <div class="col-md-5 control-label col-md-offset-4">
       <div class="panel panel-default">
         <div class="panel-body">
-          <textarea name="image" class="form-control" ng-model='product.image'/>
+          <textarea name="image" class="hidden form-control" ng-model='product.image'/>
           <input class="bottom-marg-15" type="file" name="file" file>
           <!-- Progress Bar -->
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="{{ uploadProgress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ uploadProgress }}%;">
+            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="{{ uploadProgress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ uploadProgress }}%;">
               {{ uploadProgress == 0 ? '' : uploadProgress + '%' }}
             </div>
           </div>
@@ -52,10 +63,10 @@
     </div>
   </div>
   <div class="form-group">
-    <div class="col-md-offset-2 col-md-3">
+    <div class="col-md-offset-2 col-md-7">
       <button class="btn btn-default" ng-click="cancel()"> Cancel</button>
     </div>
-    <div class="col-md-4 text-right">
+    <div>
       <button class="btn btn-primary" ng-click="save()"> Save </button>
     </div>
   </div>

@@ -1,30 +1,31 @@
 <navbar></navbar>
-  <h1 class="text-center col-md-6 col-md-offset-3">Search Products</h1>
-</header>
-<section class="row">
-  <form>
-    <div class="form-group col-md-6 col-md-offset-3">
-      <label for="keywords" class="sr-only">Keywords</label>
-      <input ng-model="search"name="keywords" type="text" autofocus class="form-control" placeholder=" ">
-    </div>
-    <div class="form-group col-md-6 col-md-offset-3 text-center">
-    </div>
-  </form>
-</section>
-<hr>
 <section class="row" ng-if="products">
-  <h1 class="text-center h2">Products</h1>
+  <section class="row">
+    <form>
+      <div class="form-group col-md-6 col-md-offset-3">
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-search"/></span>
+          <label for="keywords" class="sr-only">Keywords</label>
+          <input ng-model="search"name="keywords" type="text" autofocus class="form-control" placeholder=" ">
+        </div>
+      </div>
+      <div class="form-group col-md-6 col-md-offset-3 text-center">
+      </div>
+    </form>
+  </section>
+  <hr>
+  <h1 class="text-center col-md-6 col-md-offset-3">Products</h1>
   <ul class="list-unstyled">
-     <li ng-repeat="product in products | filter:{ name: search }">
+     <li ng-repeat="product in products | filter: search">
       <section class="well col-md-6 col-md-offset-3">
         <h1 class="h3 col-md-6 " style="margin-top: 0; word-wrap: break-word;"><a href ng-click="view(product.id)" >{{product.name}}</a></h1>
         <p class="col-md-6 " style="margin-top: 0">{{product.description}}</p>
         <p class="col-md-6 " style="margin-top: 0">Qty: {{product.quantity}}</p>
         <p class="col-md-6 " style="margin-top: 0">Price ($): {{product.price}}</p>
         <p class="col-md-6 " style="margin-top: 0">SKU: {{product.sku}}</p>
-        <div class="col-md-6">
-          <button ng-click="edit(product.id)" class="btn btn-info">Edit</button>
-          <button ng-click="delete(product.id)" class="btn btn-danger">Delete</button>
+        <img class="col-md-6 img-responsive" ng-src="{{product.image}}"/>
+        <div class="col-md-6 pull-right" >
+          <button ng-click="edit(product.id)" class="btn btn-primary">Edit</button>
         </div>
       </section>
     </li>

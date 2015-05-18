@@ -13,4 +13,5 @@ controllers.controller("ProductsController", [ '$scope', '$routeParams', '$locat
     $scope.newProduct = -> $location.path("/products/new")
 
     $scope.edit      = (productId)-> $location.path("/products/#{productId}/edit")
+    
 ])
