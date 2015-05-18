@@ -21,7 +21,7 @@
         <h1 class="h3 col-md-6 " style="margin-top: 0; word-wrap: break-word;"><a href ng-click="view(product.id)" >{{product.name}}</a></h1>
         <p class="col-md-6 " style="margin-top: 0">{{product.description}}</p>
         <p class="col-md-6 " style="margin-top: 0">Qty: {{product.quantity}}</p>
-        <p class="col-md-6 " style="margin-top: 0">Price ($): {{product.price}}</p>
+        <p class="col-md-6 " style="margin-top: 0" currency>Price: {{product.price | currency}}</p>
         <p class="col-md-6 " style="margin-top: 0">SKU: {{product.sku}}</p>
         <img class="col-md-6 img-responsive" ng-src="{{product.image}}"/>
         <div class="col-md-6 pull-right" >

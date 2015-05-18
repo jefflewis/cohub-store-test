@@ -1,3 +1,5 @@
+'use strict'
+
 angular.module('cohub-test-store').directive 'navbar', ->
   restrict: 'E'
   replace: true

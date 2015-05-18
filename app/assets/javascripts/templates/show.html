@@ -28,8 +28,8 @@
         {{product.quantity}}
       </li>
       <li class="list-group-item panel-body">
-        <span class="label label-default">Price ($)</span>
-        {{product.price}}
+        <span class="label label-default">Price</span>
+        <span currency>{{product.price | currency}}</span>
       </li>
       <li class="list-group-item panel-body">
         <span class="label label-default">SKU</span>
