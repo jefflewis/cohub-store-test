@@ -26526,3 +26526,828 @@ Processing by ProductsController#index as JSON
   Rendered products/_product.json.jbuilder (0.6ms)
   Rendered products/index.json.jbuilder (10.1ms)
 Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-18 06:43:55 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 409ms (Views: 408.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/aws-sdk-js/dist/aws-sdk.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/directives/currency.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/directives/s3upload.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/directives/navbar.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/templates/navbar.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/templates/products.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+
+
+Started GET "/products?format=json" for 127.0.0.1 at 2015-05-18 06:43:56 -0700
+Processing by ProductsController#index as JSON
+  [1m[35mProduct Load (2.0ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/_product.json.jbuilder (1.0ms)
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/index.json.jbuilder (29.9ms)
+Completed 200 OK in 43ms (Views: 29.5ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:44:00 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.6ms)
+  Rendered products/show.json.jbuilder (1.9ms)
+Completed 200 OK in 27ms (Views: 10.5ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:44:06 -0700
+Processing by ProductsController#update as JSON
+  Parameters: {"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg", "product"=>{"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg"}}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+Unpermitted parameter: id
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 204 No Content in 8ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:44:06 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (1.1ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:44:36 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (1.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.5ms)
+  Rendered products/show.json.jbuilder (1.9ms)
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:44:43 -0700
+Processing by ProductsController#update as JSON
+  Parameters: {"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg", "product"=>{"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg"}}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: id
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:44:43 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (1.2ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-18 06:46:10 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 259ms (Views: 258.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/aws-sdk-js/dist/aws-sdk.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/directives/currency.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/directives/s3upload.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/directives/navbar.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/templates/navbar.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/templates/products.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:46:11 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.7ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.4ms)
+  Rendered products/show.json.jbuilder (7.9ms)
+Completed 200 OK in 55ms (Views: 18.4ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:46:13 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (1.5ms)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:46:20 -0700
+Processing by ProductsController#update as JSON
+  Parameters: {"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg", "product"=>{"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg"}}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+Unpermitted parameter: id
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Completed 204 No Content in 7ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:46:20 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (1.2ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-18 06:47:08 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 252ms (Views: 251.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/aws-sdk-js/dist/aws-sdk.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/directives/currency.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/directives/s3upload.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/directives/navbar.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/templates/navbar.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/templates/products.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:47:09 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.5ms)
+  Rendered products/show.json.jbuilder (4.9ms)
+Completed 200 OK in 59ms (Views: 13.4ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:47:11 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (1.4ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:47:14 -0700
+Processing by ProductsController#update as JSON
+  Parameters: {"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "price"=>"35.0", "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg", "product"=>{"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "price"=>"35.0", "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg"}}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+Unpermitted parameter: id
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Completed 204 No Content in 8ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:47:14 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (2.4ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:47:17 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.9ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (1.5ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-18 06:50:21 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 235ms (Views: 234.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/aws-sdk-js/dist/aws-sdk.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/directives/currency.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/directives/s3upload.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/directives/navbar.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/templates/navbar.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/templates/products.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:50:22 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_product.json.jbuilder (1.1ms)
+  Rendered products/show.json.jbuilder (7.1ms)
+Completed 200 OK in 67ms (Views: 33.4ms | ActiveRecord: 6.6ms)
+
+
+Started PUT "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:50:27 -0700
+Processing by ProductsController#update as JSON
+  Parameters: {"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg", "product"=>{"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg"}}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: id
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 8ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:50:27 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.3ms)
+  Rendered products/show.json.jbuilder (2.4ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:50:31 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (1.6ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-18 06:51:48 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 212ms (Views: 211.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/aws-sdk-js/dist/aws-sdk.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/directives/currency.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/directives/s3upload.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/templates/navbar.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/directives/navbar.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/templates/products.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:51:49 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.5ms)
+  Rendered products/show.json.jbuilder (5.2ms)
+Completed 200 OK in 51ms (Views: 14.2ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/aws-sdk-js/dist/aws-sdk.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/directives/currency.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/directives/s3upload.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/directives/navbar.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/templates/navbar.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/templates/products.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:51:51 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (2.2ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:51:55 -0700
+Processing by ProductsController#update as JSON
+  Parameters: {"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "price"=>"35.0", "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg", "product"=>{"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "price"=>"35.0", "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg"}}
+  [1m[35mProduct Load (0.8ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+Unpermitted parameter: id
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Completed 204 No Content in 17ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:51:56 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (1.3ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-18 06:52:33 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 224ms (Views: 223.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/angular-resource/angular-resource.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/angular-flash/dist/angular-flash.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/aws-sdk-js/dist/aws-sdk.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/controllers/ProductController.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/directives/currency.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/directives/s3upload.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/templates/index.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/controllers/ProductsController.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/directives/navbar.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/templates/form.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/templates/navbar.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/templates/products.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/assets/templates/show.js?body=1" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:52:34 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.8ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_product.json.jbuilder (1.1ms)
+  Rendered products/show.json.jbuilder (6.2ms)
+Completed 200 OK in 57ms (Views: 15.2ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:52:37 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.3ms)
+  Rendered products/show.json.jbuilder (1.7ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:52:40 -0700
+Processing by ProductsController#update as JSON
+  Parameters: {"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "price"=>"35.50", "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg", "product"=>{"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "price"=>"35.50", "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg"}}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+Unpermitted parameter: id
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.3ms)[0m  UPDATE "products" SET "price" = $1, "updated_at" = $2 WHERE "products"."id" = $3  [["price", "35.5"], ["updated_at", "2015-05-18 13:52:40.468557"], ["id", 1]]
+  [1m[36m (4.8ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 22ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:52:40 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (1.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (1.5ms)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products?format=json" for 127.0.0.1 at 2015-05-18 06:52:43 -0700
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/_product.json.jbuilder (0.8ms)
+  Rendered products/_product.json.jbuilder (0.4ms)
+  Rendered products/index.json.jbuilder (5.5ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:52:51 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (1.5ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:52:54 -0700
+Processing by ProductsController#update as JSON
+  Parameters: {"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "price"=>"35.5sdfgkj", "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg", "product"=>{"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "price"=>"35.5sdfgkj", "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg"}}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: id
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mUPDATE "products" SET "price" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["price", "35.5"], ["updated_at", "2015-05-18 13:52:54.928426"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Completed 204 No Content in 9ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:52:55 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (1.4ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products?format=json" for 127.0.0.1 at 2015-05-18 06:53:00 -0700
+Processing by ProductsController#index as JSON
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/_product.json.jbuilder (0.4ms)
+  Rendered products/index.json.jbuilder (4.3ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:53:05 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.3ms)
+  Rendered products/show.json.jbuilder (1.1ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:53:10 -0700
+Processing by ProductsController#update as JSON
+  Parameters: {"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "price"=>"Hey there", "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg", "product"=>{"id"=>"1", "name"=>"First Test", "description"=>"First entry in new database tables (recreated)", "quantity"=>5, "price"=>"Hey there", "sku"=>"CH-001", "image"=>"https://s3.amazonaws.com/cohubteststoreimages/k3SyLhR5-1351571497.jpg"}}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+Unpermitted parameter: id
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "products" SET "price" = $1, "updated_at" = $2 WHERE "products"."id" = $3  [["price", "0.0"], ["updated_at", "2015-05-18 13:53:11.008033"], ["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-18 06:53:11 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.1ms)
+  Rendered products/show.json.jbuilder (0.9ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms)
