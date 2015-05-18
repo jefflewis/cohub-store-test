@@ -25834,3 +25834,56 @@ Processing by ProductsController#show as JSON
   Rendered products/_product.json.jbuilder (0.1ms)
   Rendered products/show.json.jbuilder (1.0ms)
 Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products?format=json" for 127.0.0.1 at 2015-05-17 23:11:50 -0700
+Processing by ProductsController#index as JSON
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/_product.json.jbuilder (1.4ms)
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/index.json.jbuilder (24.7ms)
+Completed 200 OK in 42ms (Views: 36.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-17 23:12:38 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (2.9ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/_product.json.jbuilder (0.2ms)
+  Rendered products/show.json.jbuilder (24.7ms)
+Completed 200 OK in 46ms (Views: 38.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/products/1?format=json" for 127.0.0.1 at 2015-05-17 23:12:48 -0700
+Processing by ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/_product.json.jbuilder (1.2ms)
+  Rendered products/show.json.jbuilder (2.8ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeDataTypeForPrice (20150518062040)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (6.0ms)[0m  [1mALTER TABLE "products" ALTER COLUMN "pice" TYPE money[0m
+PG::UndefinedColumn: ERROR:  column "pice" of relation "products" does not exist
+: ALTER TABLE "products" ALTER COLUMN "pice" TYPE money
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeDataTypeForPrice (20150518062040)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (31.2ms)[0m  [1mALTER TABLE "products" ALTER COLUMN "price" TYPE money[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150518062040"]]
+  [1m[36m (3.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (8.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'products'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
